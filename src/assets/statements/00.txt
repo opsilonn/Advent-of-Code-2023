@@ -1,0 +1,2 @@
+On prend en entrée une liste plate de nombres.
+Il faut calculer la différence entre le nombre le plus élevé, et le nombre le plus bas.

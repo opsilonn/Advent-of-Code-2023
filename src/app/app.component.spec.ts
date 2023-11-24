@@ -16,8 +16,4 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
-
-  it(`should have the 'Advent-of-Code-2023' title`, () => {
-    expect(component.title).toEqual('Advent-of-Code-2023');
-  });
 });
