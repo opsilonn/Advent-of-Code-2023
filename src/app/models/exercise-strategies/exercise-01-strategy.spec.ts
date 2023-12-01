@@ -16,12 +16,17 @@ describe('Exercise01Strategy', () => {
         expect(strategy).toBeTruthy();
     });
 
-    it('#resolve Devrait échouer', () => {
+    it('#resolve Quand on reçoit une liste de mots ayant des chiffres insérés, alors on calcule la somme des nombres composés des premiers et derniers chiffres de chaque ligne', () => {
         // Given
-        const data: string[] = [];
+        const data: string[] = [
+            '1abc2', // 12
+            'pqr3stu8vwx', // 38
+            'a1b2c3d4e5f', // 15
+            'treb7uchet', // 77
+        ];
 
         // When && Then
-        expect(() => strategy.resolve(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve(data)).toEqual(142);
     });
 
     it('#resolve2 Devrait échouer', () => {
