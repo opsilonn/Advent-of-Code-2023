@@ -3,6 +3,7 @@ import { ExerciseStrategy } from "src/app/models/exercise-strategy";
 export class Exercise01Strategy implements ExerciseStrategy {
 
     private readonly BASE_10 = 10;
+    private readonly NUMBER_AS_STRING = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
     /**
      * Prends un jeu de données, fait des nombres composés des premiers et derniers chiffres contenu de chaque phrase, et en calcule la somme
@@ -11,13 +12,15 @@ export class Exercise01Strategy implements ExerciseStrategy {
      */
     public resolve(data: string[]): number {
         return data
-            .map((str: string) => this.getFirstAndLastFromString(str))
+            .map((str: string) => this.getFirstAndLastFromString(str, false))
             .reduce((sum: number, current: number) => sum + current, 0);
     }
 
     /** Méthode temporaire */
     public resolve2(data: string[]): number {
-        throw Error('Méthode non implémentée - ' + data.length);
+        return data
+            .map((str: string) => this.getFirstAndLastFromString(str, true))
+            .reduce((sum: number, current: number) => sum + current, 0);
     }
 
     /**
@@ -25,7 +28,7 @@ export class Exercise01Strategy implements ExerciseStrategy {
      * @param str Phrase à traiter
      * @returns Un nombre composé du premier et dernier chiffre contenu dans la phrase
      */
-    private getFirstAndLastFromString(str: string): number {
+    private getFirstAndLastFromString(str: string, doIncludeNumberAsString: boolean): number {
         let first = -1;
         let last = -1;
 
@@ -37,6 +40,16 @@ export class Exercise01Strategy implements ExerciseStrategy {
                     first = currentChar;
                 }
                 last = currentChar;
+            }
+
+            if (doIncludeNumberAsString) {
+                const indexNumberAsString: number = this.NUMBER_AS_STRING.findIndex((numberAsString: string) => str.substring(i, i + numberAsString.length) === numberAsString);
+                if (indexNumberAsString !== -1) {
+                    if (first === -1) {
+                        first = indexNumberAsString;
+                    }
+                    last = indexNumberAsString;
+                }
             }
         }
 
