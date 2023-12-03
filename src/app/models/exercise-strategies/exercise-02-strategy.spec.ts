@@ -16,12 +16,18 @@ describe('Exercise02Strategy', () => {
         expect(strategy).toBeTruthy();
     });
 
-    it('#resolve Devrait échouer', () => {
+    it('#resolve Quand on reçoit une liste de parties composées de différents tirages, alors retourne la somme des Ids des parties correspondant à un jeu donné', () => {
         // Given
-        const data: string[] = [];
+        const data = [
+            'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green', // Oui !
+            'Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue', // Oui !
+            'Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red', // Nope...
+            'Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red', // Nope...
+            'Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green' // Oui !
+        ];
 
         // When && Then
-        expect(() => strategy.resolve(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve(data)).toEqual(8);
     });
 
     it('#resolve2 Devrait échouer', () => {
