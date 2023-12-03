@@ -21,9 +21,15 @@ export class Exercise02Strategy implements ExerciseStrategy {
             .reduce((sum: number, current: Game) => sum + current.id, 0);
     }
 
-    /** Méthode temporaire */
+    /**
+     * Prends une liste de parties, et calcule la somme de leurs puissances minimales
+     * @param data Jeu de données à traiter
+     * @returns La somme des puissances minimales de plusieurs parties
+     */
     public resolve2(data: string[]): number {
-        throw Error('Méthode non implémentée - ' + data.length);
+        return data
+            .map((str: string) => this.readGame(str))
+            .reduce((sum: number, game: Game) => sum + this.minimumCubePowerForGame(game), 0);
     }
 
     /**
@@ -73,5 +79,23 @@ export class Exercise02Strategy implements ExerciseStrategy {
             const colorValue = SET_DATA[color];
             return game.draws.every((draw: Record<string, number>) => draw[color] ? draw[color] <= colorValue : true);
         });
+    }
+
+    /**
+     * Retourne la puissance minimale d'une partie
+     * Puissance minimale => multiplication des nombres de cubes de couleur minimaux pour passer tous les rounds
+     * @param game Partie dont on veut calculer la puissance minimale
+     * @returns  La puissance minimale d'une partie
+     */
+    private minimumCubePowerForGame(game: Game): number {
+        const maxPerColor: Record<string, number> = {};
+        
+        game.draws.forEach((draw: Record<string, number>) => {
+            Object.keys(draw)
+                .filter((color: string) => !maxPerColor[color] || maxPerColor[color] < draw[color])
+                .forEach((color: string) => maxPerColor[color] = draw[color]);
+        });
+
+        return Object.keys(maxPerColor).reduce((sum: number, currentColor: string) => sum * maxPerColor[currentColor], 1);
     }
 }
