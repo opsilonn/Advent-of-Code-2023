@@ -15,9 +15,23 @@ export class Exercise04Strategy implements ExerciseStrategy {
             .reduce((sum: number, current: number) => sum + current, 0);
     }
 
-    /** Méthode temporaire */
+    /**
+     * Pour une liste de chiffres vainqueurs / chiffres tirés, retourne le nombre de ticket (des tickets sont rajoutés procéduralement)
+     * @param data Jeu de données à traiter
+     * @returns le nombre de tickets disponibles, après génération
+     */
     public resolve2(data: string[]): number {
-        throw Error('Méthode non implémentée - ' + data.length);
+        const sizes: number[] = data.map(() => 1);
+
+        data.forEach((line: string, index: number) => {
+            const n: number = this.numberOfWinningNumbers(line);
+            for (let i = index + 1; i <= index + n; i++) {
+                sizes[i] += sizes[index];
+            }
+        });
+
+        return sizes
+            .reduce((sum: number, current: number) => sum + current, 0);
     }
 
     private readLine(line: string): number {
@@ -45,5 +59,24 @@ export class Exercise04Strategy implements ExerciseStrategy {
             }
         });
         return total;
+    }
+
+    private numberOfWinningNumbers(line: string): number {
+        // On supprime le morceau "Partie XYZ :"
+        line = line.split(':')[1];
+
+        const [winningNumbersStr, elfNumbersStr]: string[] = line.split('|');
+        const winningNumbers: number[] = winningNumbersStr
+            .split(' ')
+            .filter((str: string) => !!str)
+            .map((str: string) => parseInt(str, this.BASE_10));
+        const elfNumbers: number[] = elfNumbersStr
+            .split(' ')
+            .filter((str: string) => !!str)
+            .map((str: string) => parseInt(str, this.BASE_10));
+
+        return elfNumbers
+            .filter((n: number) => (winningNumbers.includes(n)))
+            .length;
     }
 }
