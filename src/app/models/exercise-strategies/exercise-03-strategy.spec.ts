@@ -16,12 +16,23 @@ describe('Exercise03Strategy', () => {
         expect(strategy).toBeTruthy();
     });
 
-    it('#resolve Devrait échouer', () => {
+    it('#resolve Quand on reçoit une liste de string contenant des nombres cachés, alors retourne la somme des nombres entourés par au moins un caractère spécial', () => {
         // Given
-        const data: string[] = [];
+        const data = [
+            '467..114..',
+            '...*......',
+            '..35..633.',
+            '......#...',
+            '617*......',
+            '.....+.58.',
+            '..592.....',
+            '......755.',
+            '...$.*....',
+            '.664.598..',
+        ];
 
         // When && Then
-        expect(() => strategy.resolve(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve(data)).toEqual(4361);
     });
 
     it('#resolve2 Devrait échouer', () => {
