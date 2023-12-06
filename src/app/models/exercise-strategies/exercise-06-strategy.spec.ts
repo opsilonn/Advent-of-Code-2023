@@ -16,12 +16,19 @@ describe('Exercise06Strategy', () => {
         expect(strategy).toBeTruthy();
     });
 
-    it('#resolve Devrait échouer', () => {
+    it('#resolve Quand on reçoit une liste de string contenant des parties, alors retourne la multiplication des nombres de façon de battre le record de chaque partie', () => {
         // Given
-        const data: string[] = [];
+        const data: string[] = [
+            'Time:      7  15   30',
+            'Distance:  9  40  200',
+        ];
+        // Game 1 : 4 façons (2, 3, 4, 5)
+        // Game 2 : 8 façons (4, 5, ..., 10, 11)
+        // Game 3 : 9 façons (11, 12, ..., 18, 19)
+        const total = 4 * 8 * 9;
 
         // When && Then
-        expect(() => strategy.resolve(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve(data)).toEqual(total);
     });
 
     it('#resolve2 Devrait échouer', () => {
