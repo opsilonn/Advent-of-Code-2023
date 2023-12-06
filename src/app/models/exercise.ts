@@ -4,6 +4,7 @@ import { Exercise02Strategy } from "src/app/models/exercise-strategies/exercise-
 import { Exercise03Strategy } from "src/app/models/exercise-strategies/exercise-03-strategy";
 import { Exercise04Strategy } from "src/app/models/exercise-strategies/exercise-04-strategy";
 import { Exercise05Strategy } from "src/app/models/exercise-strategies/exercise-05-strategy";
+import { Exercise06Strategy } from "src/app/models/exercise-strategies/exercise-06-strategy";
 import { ExerciseStrategy } from "src/app/models/exercise-strategy";
 
 export class Exercise {
@@ -13,7 +14,7 @@ export class Exercise {
     static readonly Exercise03 = new Exercise('03', 'Gear Ratios', new Exercise03Strategy());
     static readonly Exercise04 = new Exercise('04', 'Scratchcards', new Exercise04Strategy());
     static readonly Exercise05 = new Exercise('05', 'If You Give A Seed A Fertilizer', new Exercise05Strategy());
-    static readonly Exercise06 = new Exercise('06', '???', null);
+    static readonly Exercise06 = new Exercise('06', 'Wait For It', new Exercise06Strategy());
     static readonly Exercise07 = new Exercise('07', '???', null);
     static readonly Exercise08 = new Exercise('08', '???', null);
     static readonly Exercise09 = new Exercise('09', '???', null);
