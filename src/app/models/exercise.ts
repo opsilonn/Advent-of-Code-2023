@@ -1,11 +1,12 @@
 import { Exercise00Strategy } from "src/app/models/exercise-strategies/exercise-00-strategy";
 import { Exercise01Strategy } from "src/app/models/exercise-strategies/exercise-01-strategy";
+import { Exercise02Strategy } from "src/app/models/exercise-strategies/exercise-02-strategy";
 import { ExerciseStrategy } from "src/app/models/exercise-strategy";
 
 export class Exercise {
     static readonly Exercise00 = new Exercise('00', 'Trouver la différence entre 2 extrêmes', new Exercise00Strategy());
     static readonly Exercise01 = new Exercise('01', 'Trebuchet?!', new Exercise01Strategy());
-    static readonly Exercise02 = new Exercise('02', '???', null);
+    static readonly Exercise02 = new Exercise('02', 'Cube Conundrum', new Exercise02Strategy());
     static readonly Exercise03 = new Exercise('03', '???', null);
     static readonly Exercise04 = new Exercise('04', '???', null);
     static readonly Exercise05 = new Exercise('05', '???', null);
