@@ -31,11 +31,18 @@ describe('Exercise06Strategy', () => {
         expect(strategy.resolve(data)).toEqual(total);
     });
 
-    it('#resolve2 Devrait échouer', () => {
+    it('#resolve2 Quand on reçoit une liste de string contenant une partie éclatée, alors retourne le nombre de façon de battre le record de cette partie', () => {
         // Given
-        const data: string[] = [];
+        const data: string[] = [
+            'Time:      7  15   30',
+            'Distance:  9  40  200',
+        ];
+        // à interpréter comme :
+        // Time: 71530
+        // Distance: 940200
+        // Soit une Game avec 71503 façons (14, 15, ..., 71515, 71516)
 
         // When && Then
-        expect(() => strategy.resolve2(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve2(data)).toEqual(71503);
     });
 });
