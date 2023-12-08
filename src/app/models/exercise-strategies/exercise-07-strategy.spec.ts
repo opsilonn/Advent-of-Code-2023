@@ -16,12 +16,19 @@ describe('Exercise07Strategy', () => {
         expect(strategy).toBeTruthy();
     });
 
-    it('#resolve Devrait échouer', () => {
+    it('#resolve Quand on lui passe une liste de main, alors fait la somme des paris multiplié par une valeur représentant leur ordre de valeur', () => {
         // Given
-        const data: string[] = [];
+        const data: string[] = [
+            '32T3K 765', // 5ème meilleure main => 1 pts
+            'T55J5 684', // 2ème meilleure main => 4 pts
+            'KK677 28', // 3ème meilleure main => 3 pts
+            'KTJJT 220', // 4ème meilleure main => 2 pts
+            'QQQJA 483', // 1ère meilleure main => 5 pts
+        ];
+        const total = 765 * 1 + 684 * 4 + 28 * 3 + 220 * 2 + 483 * 5;
 
         // When && Then
-        expect(() => strategy.resolve(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve(data)).toEqual(total);
     });
 
     it('#resolve2 Devrait échouer', () => {
