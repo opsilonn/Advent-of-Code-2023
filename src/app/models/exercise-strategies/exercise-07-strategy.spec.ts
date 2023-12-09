@@ -31,11 +31,30 @@ describe('Exercise07Strategy', () => {
         expect(strategy.resolve(data)).toEqual(total);
     });
 
-    it('#resolve2 Devrait échouer', () => {
+    it('#resolve2 Quand on lui passe une liste de main, alors fait la somme des paris multiplié par une valeur représentant leur ordre de valeur, une fois optimisé', () => {
         // Given
-        const data: string[] = [];
+        const data: string[] = [
+            '32T3K 765', // 5ème meilleure main => 1 pts
+            'T55J5 684', // 3ème meilleure main => 3 pts
+            'KK677 28', // 4ème meilleure main => 2 pts
+            'KTJJT 220', // 1ère meilleure main => 5 pts
+            'QQQJA 483', // 2ème meilleure main => 4 pts
+        ];
+        const total = 765 * 1 + 684 * 3 + 28 * 2 + 220 * 5 + 483 * 4;
 
         // When && Then
-        expect(() => strategy.resolve2(data)).toThrowError('Méthode non implémentée - 0');
+        expect(strategy.resolve2(data)).toEqual(total);
+    });
+
+    it('#resolve2 Quand on lui passe une liste de main avec des quintuplets, alors celui composé de Jokers est valué plus bas', () => {
+        // Given
+        const data: string[] = [
+            'AAAAA 10', // 1ère meilleure main => 2 pts
+            'JJJJJ 1', // 2ème meilleure main => 1 pts
+        ];
+        const total = 10 * 2 + 1 * 1;
+
+        // When && Then
+        expect(strategy.resolve2(data)).toEqual(total);
     });
 });
