@@ -57,4 +57,34 @@ describe('Exercise07Strategy', () => {
         // When && Then
         expect(strategy.resolve2(data)).toEqual(total);
     });
+
+    fit('#resolve2 Quand on lui passe une liste de main, alors fait la somme des paris multiplié par une valeur représentant leur ordre de valeur, une fois optimisé', () => {
+        // Given
+        const data = [
+            { input: '424KT 464', value: 5 },
+            { input: '3J4QA 723', value: 3 },
+            { input: '94Q85 210', value: 1 },
+            { input: '25722 304', value: 12 },
+            { input: 'Q4QQQ 176', value: 19 },
+            { input: '3J777 548', value: 17 },
+            { input: '37687 944', value: 4 },
+            { input: '8J6TK 274', value: 7 },
+            { input: '99TQA 623', value: 8 },
+            { input: '58389 577', value: 6 },
+            { input: 'AAAQA 346', value: 20 },
+            { input: '33A66 773', value: 11 },
+            { input: '2K2K7 626', value: 10 },
+            { input: '37776 242', value: 13 },
+            { input: 'ATAA5 750', value: 16 },
+            { input: 'T46KA 551', value: 2 },
+            { input: '99J9T 916', value: 18 },
+            { input: 'Q4Q7Q 307', value: 15 },
+            { input: '9JA4A 90', value: 14 },
+            { input: 'TT2KQ 19', value: 9 },
+        ];
+        const total = data.reduce((cpt, current) => cpt + current.value * (parseInt(current.input.split(' ')[1], 10)), 0);
+
+        // When && Then
+        expect(strategy.resolve2(data.map(_ => _.input))).toEqual(total);
+    });
 });

@@ -33,6 +33,7 @@ export class Exercise07Strategy implements ExerciseStrategy {
             .readHands(data)
             .sort((hand1: Hand, hand2: Hand) => this.compareHands(hand1, hand2, true));
 
+            console.log(hands.map(_ => _.cards));
         return hands
             .reduce((total: number, current: Hand, index: number) => total + current.bet * (hands.length - index), 0);
     }
