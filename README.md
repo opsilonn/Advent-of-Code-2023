@@ -1,13 +1,13 @@
-# Advent of Code 2023
+# Advent of Code
 
-This is my attempt at resolving the [Advent of Code #2023](https://adventofcode.com) !
+This is my attempt at resolving the [Advent of Code](https://adventofcode.com) !
 
 
 
 ### Where to find the project
 Here is the Github repository :
  ```
-https://github.com/opsilonn/advent-of-code-2023
+https://github.com/opsilonn/advent-of-code
  ```
 
 

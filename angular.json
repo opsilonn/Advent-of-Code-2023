@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Advent-of-Code-2023": {
+    "Advent-of-Code": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/advent-of-code-2023",
+            "outputPath": "dist/advent-of-code",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Advent-of-Code-2023:build:production"
+              "buildTarget": "Advent-of-Code:build:production"
             },
             "development": {
-              "buildTarget": "Advent-of-Code-2023:build:development"
+              "buildTarget": "Advent-of-Code:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Advent-of-Code-2023:build"
+            "buildTarget": "Advent-of-Code:build"
           }
         },
         "test": {
