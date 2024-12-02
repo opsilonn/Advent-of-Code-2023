@@ -27,7 +27,7 @@ Install the dependencies :
   $npm install
   
 Launch the server :
-  $npm run dev
+  $npm run start
 ```
 
 
