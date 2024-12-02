@@ -2,6 +2,19 @@
   <!-- Sélection de l'exercice -->
   <mat-grid-tile colspan="4" rowspan="1">
     <form [formGroup]="form">
+      <!-- Année -->
+      <mat-form-field [style.width.px]=450>
+        <mat-label>Veuillez sélectionner une année</mat-label>
+        <mat-select formControlName="year" name="year">
+          @for (year of years; track year) {
+          <mat-option [value]="year">{{ year }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <div class="spacer"></div>
+  
+      <!-- Exercice -->
       <mat-form-field [style.width.px]=450>
         <mat-label>Veuillez sélectionner un exercice</mat-label>
         <mat-select formControlName="exercise" name="exercise">
