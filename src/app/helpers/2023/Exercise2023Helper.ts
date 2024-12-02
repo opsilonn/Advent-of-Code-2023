@@ -1,5 +1,4 @@
 import { Exercise } from 'src/app/models/exercise';
-import { Exercise00Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-00-strategy';
 import { Exercise01Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-01-strategy';
 import { Exercise02Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-02-strategy';
 import { Exercise03Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-03-strategy';
@@ -12,7 +11,6 @@ export class Exercise2023Helper {
 
     public static getAll(): Exercise[] {
         return [
-            new Exercise('00', 'Trouver la différence entre 2 extrêmes', new Exercise00Strategy()),
             new Exercise('01', 'Trebuchet?!', new Exercise01Strategy()),
             new Exercise('02', 'Cube Conundrum', new Exercise02Strategy()),
             new Exercise('03', 'Gear Ratios', new Exercise03Strategy()),

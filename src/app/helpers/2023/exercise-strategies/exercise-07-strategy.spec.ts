@@ -58,7 +58,7 @@ describe('Exercise07Strategy', () => {
         expect(strategy.resolve2(data)).toEqual(total);
     });
 
-    fit('#resolve2 Quand on lui passe une liste de main, alors fait la somme des paris multiplié par une valeur représentant leur ordre de valeur, une fois optimisé', () => {
+    it('#resolve2 Quand on lui passe une liste de main, alors fait la somme des paris multiplié par une valeur représentant leur ordre de valeur, une fois optimisé', () => {
         // Given
         const data = [
             { input: '424KT 464', value: 5 },

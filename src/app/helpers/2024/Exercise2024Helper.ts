@@ -10,7 +10,6 @@ export class Exercise2024Helper {
             new Exercise('04', '???', null),
             new Exercise('05', '???', null),
             new Exercise('06', '???', null),
-            new Exercise('06', '???', null),
             new Exercise('07', '???', null),
             new Exercise('08', '???', null),
             new Exercise('09', '???', null),
