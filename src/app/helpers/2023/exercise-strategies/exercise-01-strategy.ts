@@ -1,4 +1,4 @@
-import { ExerciseStrategy } from "src/app/models/exercise-strategy";
+import { ExerciseStrategy } from 'src/app/models/exercise-strategy';
 
 export class Exercise01Strategy implements ExerciseStrategy {
 

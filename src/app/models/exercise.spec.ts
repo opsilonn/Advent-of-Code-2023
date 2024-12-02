@@ -1,4 +1,4 @@
-import { Exercise } from "src/app/models/exercise";
+import { Exercise } from 'src/app/models/exercise';
 
 describe('Exercise', () => {
 

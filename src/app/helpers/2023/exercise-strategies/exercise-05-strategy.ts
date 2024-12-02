@@ -1,4 +1,4 @@
-import { ExerciseStrategy } from "src/app/models/exercise-strategy";
+import { ExerciseStrategy } from 'src/app/models/exercise-strategy';
 
 interface Map {
     destination: number;
@@ -29,7 +29,7 @@ export class Exercise05Strategy implements ExerciseStrategy {
         let index = 2;
         
         while(index < data.length) {
-            index++; // Pour ignorer la phrase "machin-to-machine map:"
+            index++; // Pour ignorer la phrase 'machin-to-machine map:'
             almanacs[almanacsIndex] = [];
 
             while(index < data.length && data[index] !== '') {

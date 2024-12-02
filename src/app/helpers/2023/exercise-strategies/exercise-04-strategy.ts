@@ -1,4 +1,4 @@
-import { ExerciseStrategy } from "src/app/models/exercise-strategy";
+import { ExerciseStrategy } from 'src/app/models/exercise-strategy';
 
 export class Exercise04Strategy implements ExerciseStrategy {
 
@@ -35,7 +35,7 @@ export class Exercise04Strategy implements ExerciseStrategy {
     }
 
     private readLine(line: string): number {
-        // On supprime le morceau "Partie XYZ :"
+        // On supprime le morceau 'Partie XYZ :'
         line = line.split(':')[1];
 
         const [winningNumbersStr, elfNumbersStr]: string[] = line.split('|');
@@ -62,7 +62,7 @@ export class Exercise04Strategy implements ExerciseStrategy {
     }
 
     private numberOfWinningNumbers(line: string): number {
-        // On supprime le morceau "Partie XYZ :"
+        // On supprime le morceau 'Partie XYZ :'
         line = line.split(':')[1];
 
         const [winningNumbersStr, elfNumbersStr]: string[] = line.split('|');

@@ -1,4 +1,4 @@
-import { ExerciseStrategy } from "src/app/models/exercise-strategy";
+import { ExerciseStrategy } from 'src/app/models/exercise-strategy';
 
 interface Game {
     distance: number;

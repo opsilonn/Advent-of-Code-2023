@@ -1,4 +1,4 @@
-import { ExerciseStrategy } from "src/app/models/exercise-strategy";
+import { ExerciseStrategy } from 'src/app/models/exercise-strategy';
 
 interface Hand {
     bet: number;
@@ -53,7 +53,7 @@ export class Exercise07Strategy implements ExerciseStrategy {
     /**
      * Convertit des cartes en map de chaque clé / sa quantité
      * @param cards cartes à formatter
-     * "KK997" +> { "K": 2, "9": 2, "7": 1 }
+     * 'KK997' +> { 'K': 2, '9': 2, '7': 1 }
      * @returns map de chaque clé / sa quantité
      */
     private getMappedCards(cards: string): Record<string, number> {

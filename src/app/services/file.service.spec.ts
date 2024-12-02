@@ -1,9 +1,9 @@
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
-import { TestBed, waitForAsync } from "@angular/core/testing";
-import { MockBuilder } from "ng-mocks";
-import { AppModule } from "src/app/app.module";
-import { FileService } from "src/app/services/file.service";
+import { TestBed, waitForAsync } from '@angular/core/testing';
+import { MockBuilder } from 'ng-mocks';
+import { AppModule } from 'src/app/app.module';
+import { FileService } from 'src/app/services/file.service';
 
 describe('FileService', () => {
     let service: FileService;
