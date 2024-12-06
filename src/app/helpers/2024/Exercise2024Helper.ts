@@ -1,12 +1,13 @@
 import { Exercise } from 'src/app/models/exercise';
 import { Exercise01Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-01-strategy';
+import { Exercise02Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-02-strategy';
 
 export class Exercise2024Helper {
 
     public static getAll(): Exercise[] {
         return [
             new Exercise('01', 'Day 1: Historian Hysteria', new Exercise01Strategy()),
-            new Exercise('02', '???', null),
+            new Exercise('02', 'Day 2: Red-Nosed Reports', new Exercise02Strategy()),
             new Exercise('03', '???', null),
             new Exercise('04', '???', null),
             new Exercise('05', '???', null),
