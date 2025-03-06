@@ -1,6 +1,7 @@
 import { Exercise } from 'src/app/models/exercise';
 import { Exercise01Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-01-strategy';
 import { Exercise02Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-02-strategy';
+import { Exercise03Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-03-strategy';
 
 export class Exercise2024Helper {
 
@@ -8,7 +9,7 @@ export class Exercise2024Helper {
         return [
             new Exercise('01', 'Day 1: Historian Hysteria', new Exercise01Strategy()),
             new Exercise('02', 'Day 2: Red-Nosed Reports', new Exercise02Strategy()),
-            new Exercise('03', '???', null),
+            new Exercise('03', 'Day 3 : Mull It Over', new Exercise03Strategy()),
             new Exercise('04', '???', null),
             new Exercise('05', '???', null),
             new Exercise('06', '???', null),
