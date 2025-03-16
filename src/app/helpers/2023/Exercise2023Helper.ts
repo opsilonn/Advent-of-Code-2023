@@ -1,11 +1,11 @@
 import { Exercise } from 'src/app/models/exercise';
-import { Exercise01Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-01-strategy';
-import { Exercise02Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-02-strategy';
-import { Exercise03Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-03-strategy';
-import { Exercise04Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-04-strategy';
-import { Exercise05Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-05-strategy';
-import { Exercise06Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-06-strategy';
-import { Exercise07Strategy } from 'src/app/helpers/2023/exercise-strategies/exercise-07-strategy';
+import { Exercise01Strategy } from 'src/app/helpers/2023/01/exercise-01-strategy';
+import { Exercise02Strategy } from 'src/app/helpers/2023/02/exercise-02-strategy';
+import { Exercise03Strategy } from 'src/app/helpers/2023/03/exercise-03-strategy';
+import { Exercise04Strategy } from 'src/app/helpers/2023/04/exercise-04-strategy';
+import { Exercise05Strategy } from 'src/app/helpers/2023/05/exercise-05-strategy';
+import { Exercise06Strategy } from 'src/app/helpers/2023/06/exercise-06-strategy';
+import { Exercise07Strategy } from 'src/app/helpers/2023/07/exercise-07-strategy';
 
 export class Exercise2023Helper {
 

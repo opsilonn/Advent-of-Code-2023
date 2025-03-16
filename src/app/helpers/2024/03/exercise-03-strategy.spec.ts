@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { MockBuilder } from 'ng-mocks';
 import { AppModule } from 'src/app/app.module';
-import { Exercise03Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-03-strategy';
+import { Exercise03Strategy } from 'src/app/helpers/2024/03/exercise-03-strategy';
 
 describe('Exercise03Strategy_2024', () => {
     let strategy: Exercise03Strategy;

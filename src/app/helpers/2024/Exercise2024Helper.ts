@@ -1,8 +1,8 @@
 import { Exercise } from 'src/app/models/exercise';
-import { Exercise01Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-01-strategy';
-import { Exercise02Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-02-strategy';
-import { Exercise03Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-03-strategy';
-import { Exercise04Strategy } from 'src/app/helpers/2024/exercise-strategies/exercise-04-strategy';
+import { Exercise01Strategy } from 'src/app/helpers/2024/01/exercise-01-strategy';
+import { Exercise02Strategy } from 'src/app/helpers/2024/02/exercise-02-strategy';
+import { Exercise03Strategy } from 'src/app/helpers/2024/03/exercise-03-strategy';
+import { Exercise04Strategy } from 'src/app/helpers/2024/04/exercise-04-strategy';
 
 export class Exercise2024Helper {
 
